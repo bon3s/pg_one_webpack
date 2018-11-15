@@ -32,7 +32,7 @@ var reactNativeExternalsPromise = (function() {
 module.exports = {
   debug: true,
   entry: {
-    "index.js": path.join(__dirname, "src/index.js")
+    "index.ts": path.join(__dirname, "src/index.ts")
   },
   externals: [
     function(context, request, cb) {
@@ -58,7 +58,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: "[name].js",
+    filename: "[name].ts",
     libraryTarget: "commonjs"
   },
   plugins: [
@@ -67,14 +67,14 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: ["", ".ts", ".tsx"]
   }
 };
 
 module.exports = {
   entry: "./src/index.ts",
   output: {
-    filename: "./dist/bundle.js"
+    filename: "./dist/bundle.ts"
   },
 
   // Enable sourcemaps for debugging webpack's output.

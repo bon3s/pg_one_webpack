@@ -51,7 +51,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "android": "react-native run-android",
-    "bundle": "react-native bundle --entry-file src/index.js --bundle-output /bundle",
+    "bundle": "react-native bundle --entry-file index.ts --bundle-output /bundle",
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "resolutions": {

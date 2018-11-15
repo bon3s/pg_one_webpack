@@ -75,7 +75,7 @@ class checkConnectivity {
 }
 
 const service = new checkConnectivity(
-  new REST("http://192.168.1.109:2323", 30000, "marko1234", "cors")
+  new REST("http://192.168.1.106:2323", 30000, "marko1234", "cors")
 );
 
 export default service;

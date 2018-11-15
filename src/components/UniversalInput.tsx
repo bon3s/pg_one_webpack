@@ -13,6 +13,7 @@ class UniversalInput extends Component<Props> {
   constructor(props: Props) {
     super(props);
     this.validateNumberInput = this.validateNumberInput.bind(this);
+    this.validateTextInput = this.validateTextInput.bind(this);
   }
 
   public validateNumberInput(text: string) {
@@ -34,7 +35,7 @@ class UniversalInput extends Component<Props> {
     }
   }
 
-  validateTextInput(text: string) {
+  public validateTextInput(text: string) {
     if (text.length === 0) {
       this.props.onValueChange(text);
     } else {
@@ -56,7 +57,7 @@ class UniversalInput extends Component<Props> {
             style={styles.textInputStyle}
             keyboardType="numeric"
             value={this.props.value ? String(this.props.value) : ""}
-            onChangeText={this.validateTextInput}
+            onChangeText={this.validateNumberInput}
           />
         </View>
       );
@@ -67,9 +68,7 @@ class UniversalInput extends Component<Props> {
           <TextInput
             style={styles.textInputStyle}
             value={this.props.value ? String(this.props.value) : ""}
-            onChangeText={text => {
-              this.validateTextInput(text);
-            }}
+            onChangeText={this.validateTextInput}
           />
         </View>
       );
